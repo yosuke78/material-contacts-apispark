@@ -2,7 +2,6 @@ package net.apispark.webapi.representation;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.tools.javac.jvm.Gen;
 import net.apispark.webapi.core.validation.ValidationErrors;
 import net.apispark.webapi.representation.enums.Gender;
 
