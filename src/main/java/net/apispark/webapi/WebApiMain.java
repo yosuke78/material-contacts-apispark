@@ -23,8 +23,10 @@ public class WebApiMain {
         preloadData();
 
         // Attach application to http://localhost:8000/
+        String envPort = System.getenv("PORT");
+        int port = envPort != null ? Integer.valueOf(envPort) : 8000;
         Component c = new Component();
-        c.getServers().add(Protocol.HTTP, 8000);
+        c.getServers().add(Protocol.HTTP, port);
         c.getClients().add(Protocol.CLAP);
 
         // attach REST API to /api
@@ -42,7 +44,7 @@ public class WebApiMain {
         // start server
         c.start();
 
-        LOGGER.info("Server started on http://localhost:8000/");
+        LOGGER.info("Server started on http://localhost:" + port);
 
     }
 
