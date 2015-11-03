@@ -44,7 +44,7 @@ public class WebApiMain {
         // start server
         c.start();
 
-        LOGGER.info("Server started on http://localhost:8000/");
+        LOGGER.info("Server started on http://localhost:" + port);
 
     }
 

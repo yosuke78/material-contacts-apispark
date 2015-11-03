@@ -3,7 +3,7 @@
 angular.module('starterApp')
   .factory('ContactsService', function ($http) {
 
-    var endpoint = 'http://localhost:8000/api';
+    var endpoint = '/api';
 
     return {
 
