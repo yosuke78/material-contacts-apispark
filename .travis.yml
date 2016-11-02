@@ -1,8 +1,11 @@
 language : java
 notifications:
   slack: apisparkgsi:HIRu2eYwmTltuprwvGCRTEIq
-
+script:
+- mvn package
 deploy:
   provider: heroku
   api_key:
-    secure: "c90befa9-0eb4-4e32-9205-5853b3bdc552"
+    secure: c90befa9-0eb4-4e32-9205-5853b3bdc552
+  app:
+    master: apispark
